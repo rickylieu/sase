@@ -1,0 +1,20 @@
+/* general */
+
+h1 {
+	text-align: center;
+}
+
+/* Cards */
+.card {
+	border-style: solid;
+	border-width: thin;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 2em;
+	padding-top: 1em;
+	margin: 2em;
+	border-radius: 25px;
+}
+.card-title {
+	font-size: 18px;
+}
