@@ -1,5 +1,9 @@
 /* general */
 
+body{
+	text-align: center;
+}
+
 h1 {
 	text-align: center;
 }
@@ -21,18 +25,23 @@ h1 {
 
 /* buttons */
 .weeks {
-	margin: 0 auto;
-	display:block;
+
+	display: block;
 }
 .btn {
 	background-color: #4CAF50;
 	font-size: 16px;
-	border-radius: 12px;
+	border-radius: 8px;
 	border:none;
 	padding:10px 24px;
 	color: #FFFFFF;
 	outline: 0;
 	display:block;
-	width: 10%;
 	margin: 10px;
+	min-height: 32px;
+	min-width: 120px;
+	max-height: 32px;
+	max-width: 120px;
+	height: 32px;
+	width: 120;
 }
