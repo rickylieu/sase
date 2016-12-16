@@ -31,13 +31,13 @@
         <div class="form-group">
           <!-- Event -->
           <label for="event">Event</label>
-          <input type="text" class="form-control" id="usr">
+          <input type="text" class="form-control" id="name">
         </div>
 
          <!-- Type of Event -->
 		  <div class="form-group">
   			<label for="sel1">Type of Event</label>
-  			<select class="form-control" id="sel1">
+  			<select class="form-control" id="type">
     			<option>Professional</option>
     			<option>Social</option>
     			<option>Community Service</option>
@@ -68,18 +68,36 @@
 		  <form>
   			Date:
   			<br>
-  		    <input type="date" name="date">
+  		    <input type="date" name="date" id="date">
 		  </form>
 
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" align="center">Add</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="getData()" align="center">Add</button>
       </div>
     </div>
 
   </div>
 </div>
+
+<!-- Script to get data from adding event -->
+<script>
+  function getData() {
+    var name = document.getElementById("name");
+    var type = document.getElementById("type");
+    var week = document.getElementById("week");
+    var date = document.getElementById("date");
+
+     $.post("/add_event", 
+    { 
+      "name": name.value,
+      "type": type.value, 
+      "week": week.value, 
+      "date": date.value,
+    }, function(data) {console.log("success!")} );
+  }
+</script>
 
 	<p> Put some generic info here? </p>
 
@@ -114,6 +132,8 @@
 	</div> -->
 
 	<!-- End Cards-->
-
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/sase.js"></script>
 </body>
 </html>

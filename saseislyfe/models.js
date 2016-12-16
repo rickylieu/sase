@@ -10,4 +10,4 @@ var EventSchema = new Mongoose.Schema({
   // fields are defined here
 });
 
-exports.Project = Mongoose.model('Event', EventSchema);
+exports.Event = Mongoose.model('Event', EventSchema);
