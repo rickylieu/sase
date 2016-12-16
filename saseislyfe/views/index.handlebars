@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<title> Sase 5 Lyfe </title>
+</head>
+
+<body>
+	<h1>SASE IS LYFE</h1>
+	  <!-- Trigger the modal with a button -->
+<button type="button" class="button" id="add_event" data-toggle="modal" data-target="#myModal">Add Event</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add an Event</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <!-- Event -->
+          <label for="event">Event</label>
+          <input type="text" class="form-control" id="usr">
+        </div>
+
+         <!-- Type of Event -->
+		  <div class="form-group">
+  			<label for="sel1">Type of Event</label>
+  			<select class="form-control" id="sel1">
+    			<option>Professional</option>
+    			<option>Social</option>
+    			<option>Community Service</option>
+    			<option>Fundraising</option>
+    			<option>GBM</option>
+    			<option>Officer/Intern</option>
+  			</select>
+		  </div>
+
+          <!-- Week -->
+          <div class="form-group">
+ 			 <label for="week">Week</label>
+ 			 <select class="form-control" id="week"  onmousedown="if(this.options.length>4){this.size=4;}"  onchange='this.size=0;' onblur="this.size=0;">
+  		       <option>1</option>
+   	           <option>2</option>
+  	           <option>3</option>
+   	           <option>4</option>
+   	           <option>5</option>
+   	           <option>6</option>
+  	           <option>7</option>
+   	           <option>8</option>
+   	           <option>9</option>
+   	           <option>10</option>
+             </select>
+		  </div>
+
+		  <!-- Date -->
+		  <form>
+  			Date:
+  			<br>
+  		    <input type="date" name="date">
+		  </form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" align="center">Add</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+	<p> Put some generic info here? </p>
+
+	<!-- Weekly Choice Buttons -->
+	<div class="weeks">
+		<button type="button" class="btn"> Week 1 </button>
+		<button type="button" class="btn"> Week 2 </button>
+		<button type="button" class="btn"> Week 3 </button>
+		<button type="button" class="btn"> Week 4 </button>
+		<button type="button" class="btn"> Week 5 </button>
+		<button type="button" class="btn"> Week 6 </button>
+		<button type="button" class="btn"> Week 7 </button>
+		<button type="button" class="btn"> Week 8 </button>
+		<button type="button" class="btn"> Week 9 </button>
+		<button type="button" class="btn"> Week 10 </button>
+	</div>
+	
+	<!-- Cards -->
+	<!--
+	<div class="card-stack">
+  		<div class="card">
+    		<h4 class="card-title">Game Night</h4>
+    		<p class="card-text">Here is some info about the event.</p>
+  		</div>
+	</div>
+
+	<div class="card-stack">
+  		<div class="card">
+    		<h4 class="card-title">Info Night</h4>
+    		<p class="card-text">Here is some info about the event.</p>
+  		</div>
+	</div> -->
+
+	<!-- End Cards-->
+
+</body>
+</html>
