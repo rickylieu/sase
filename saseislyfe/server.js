@@ -22,7 +22,8 @@ var sase = require('./routes/sase');
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
 var local_database_name = 'sase';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name
-var database_uri = process.env.MONGOLAB_URI || local_database_uri
+var uri = "mongodb://sase:saseislyfe@ds023478.mlab.com:23478/heroku_m9jc2gg9";
+var database_uri = uri || local_database_uri;
 mongoose.connect(database_uri);
 
 // Create the server instance
