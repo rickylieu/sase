@@ -49,6 +49,7 @@ h1 {
 	width: 120;
 }
 
-.btn-primary {
-	
+#add_event {
+	background-color: #0668B3;
+	color: white;
 }
