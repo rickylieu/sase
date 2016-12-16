@@ -18,3 +18,8 @@ h1 {
 .card-title {
 	font-size: 18px;
 }
+
+#add_event {
+	position: absolute;
+	align-self: center;
+}
