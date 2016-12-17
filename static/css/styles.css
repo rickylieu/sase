@@ -53,3 +53,7 @@ h1 {
 	background-color: #0668B3;
 	color: white;
 }
+
+#start_time .second.two-digits{
+	display: none;
+}
