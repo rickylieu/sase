@@ -1,0 +1,55 @@
+/* general */
+
+body{
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+/* Cards */
+.card {
+	border-style: solid;
+	border-width: thin;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 2em;
+	padding-top: 1em;
+	margin: 2em;
+	border-radius: 25px;
+}
+.card-title {
+	font-size: 18px;
+}
+
+
+/* buttons */
+.weeks {
+	margin:auto;
+	height: 200px;
+	width: 300px;
+
+}
+.btn {
+	background-color: #4CAF50;
+	font-size: 16px;
+	border-radius: 8px;
+	border:none;
+	padding:10px 24px;
+	color: #FFFFFF;
+	outline: 0;
+	/*display:block;*/
+	margin: 5px;
+	min-height: 32px;
+	min-width: 120px;
+	max-height: 32px;
+	max-width: 120px;
+	height: 32px;
+	width: 120;
+}
+
+#add_event {
+	background-color: #0668B3;
+	color: white;
+}
