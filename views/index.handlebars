@@ -65,25 +65,23 @@
 		  </div>
 
 		  <!-- Date -->
-		  <form>
-  			Date:
+		  <div class="form-group">
+  			<label for="Date">Date:</label>
   			<br>
   		    <input type="date" name="date" id="date">
-		  </form>
-
+		  </div>
       <div class="form-group">
-          <!-- Event -->
+        <label for="start_time">Start time:</label>
+        <input type="time" id="start_time" name="start_time" style="width:25%">
+        <label for="end_time">End Time:</label>
+        <input type="time" id="end_time" name="end_time" style="width:25%">
+
+      </div>
+      <div class="form-group">
+      <!-- Event -->
           <label for="Location">Location</label>
           <input type="text" class="form-control" id="location">
-        </div>
-
-      <form>
-        Start time:
-        <input type="time" id="start_time" name="start_time" style="width:25%">
-        End Time: 
-       <input type="time" id="end_time" name="end_time" style="width:25%">
-
-      </form>
+      </div>
 
 
       </div>
