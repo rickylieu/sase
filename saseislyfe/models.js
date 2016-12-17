@@ -6,7 +6,7 @@ var EventSchema = new Mongoose.Schema({
 	"name": String,
 	"week": Number,
 	"type": String,
-	"date": Date
+	"date": String
   // fields are defined here
 });
 
