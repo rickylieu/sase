@@ -6,5 +6,27 @@ $(document).ready(function() {
 })
 
 function initializePage() {
+	$(".btn").click(weekClick);
 	
+}
+
+function weekClick(e) {
+	e.preventDefault();
+	var week = $(this).text();
+	var i = 0;
+
+	//Only clicks if title starts with "Week"
+	if(week.substring(1,5) == "Week") {
+		console.log("Week is:" + week);
+		//Overwrite contents to append events
+		$("#week_ctns").empty();
+		//Append event
+		$("#week_ctns").append('<tr><td>Week is:' + week + '</tr></td>');
+	}
+
+	else {
+		return;
+	}
+
+
 }
