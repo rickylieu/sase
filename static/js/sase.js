@@ -20,7 +20,9 @@ function weekClick(e) {
 		console.log("Week is:" + week);
 		//Overwrite contents to append events
 		$("#week_ctns").empty();
+		$("#week_title").empty();
 		//Append event
+		$("#week_title").append(week);
 		$("#week_ctns").append('<tr><td>Week is:' + week + '</tr></td>');
 	}
 
