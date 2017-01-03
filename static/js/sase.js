@@ -26,6 +26,7 @@ function weekClick(e) {
         //After getting events, append html to modals
          function(data) {
          	//Empty the modal so we don't have multiple appends
+         	//Idk how to make this shorter :(
         	$("#week_ctns").empty();
 		    $("#week_title").empty();
 		    $("#Mon").empty();
@@ -35,6 +36,21 @@ function weekClick(e) {
 		    $("#Fri").empty();
 		    $("#Sat").empty();
 		    $("#Sun").empty();
+		   $("#Mon_head").empty();
+		    $("#Tue_head").empty();
+		    $("#Wed_head").empty();
+		    $("#Thu_head").empty();
+		    $("#Fri_head").empty();
+		    $("#Sat_head").empty();
+		    $("#Sun_head").empty();
+		    $("#Mon_head").append("Mon");
+		    $("#Tue_head").append("Tue");
+		    $("#Wed_head").append("Wed");
+		    $("#Thu_head").append("Thu");
+		    $("#Fri_head").append("Fri");
+		    $("#Sat_head").append("Sat");
+		    $("#Sun_head").append("Sun");
+
 
 
 		    //Append event
@@ -53,15 +69,42 @@ function weekClick(e) {
 		      $(day_head).empty();
 		      //Append date to table
 		      $(day_head).append(day + " " + data[i].date.substring(5,10));
+		      var color = "";
+
+		      switch (data[i].type) {
+		      	case "Professional":
+		      		color = "blue";
+		      		break
+		      	case "Social":
+		      		color = "orange"
+		      		break
+		        case "Community Service":
+		        	color = "red"
+		        	break
+		      	case "Fundraising":
+		      		color = "green"
+		      		break
+		      	case "GBM":
+		      		color = "black";
+		      		break
+		      	case "Officer/Intern":
+		      		color = "yellow";
+		      		break
+		      }
+
+		       var color_div = "<div style='border: solid; border-color:" + color + "'";
+		       console.log(color_div);
 
               
               //Append to modal html
-		      $(day_id).append("</br><b>Event: </b>" + data[i].name + "</br>"
+		      $(day_id).append(color_div + "<b>Event: </b>" + data[i].name + "</br>"
 		        + "<b>Type of Event: </b>" + data[i].type + "</br>"
 		        + "<b>Start time: </b>" + data[i].start + "</br>"
 		        + "<b>End time: </b>" + data[i].end + "</br>"
-		        + "<b>Location: </b>" + data[i].location + "</br>"
+		        + "<b>Location: </b>" + data[i].location + "</div></br>"
 		       );
+
+
              //$(day_id).css('background', 'rgb(255,220,200)');
 
              }
