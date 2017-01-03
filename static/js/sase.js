@@ -30,10 +30,10 @@ function weekClick(e) {
 		    //Append event
 	     	$("#week_title").append(week);
 	     	for(i=0; i < data.length; i++) {
-		      $("#week_ctns").append('<tr><td>' + "<b>Event: </b>" + data[i].name + "</br>"
+		      $("#week_ctns").append('<div>' + '<tr><td>' + "<b>Event: </b>" + data[i].name + "</br>"
 		        + "<b>Type of Event: </b>" + data[i].type + "</br>"
 		        + "<b>Week: </b>" + data[i].week + "</br>"
-		        + "<b>Date: </b>" + data[i].date + "</br>" + '</tr></td>');
+		        + "<b>Date: </b>" + data[i].date + "</br>" + "</br>" + '</tr></td>');
              }  
 		   });
 
