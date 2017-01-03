@@ -6,6 +6,7 @@ $(document).ready(function() {
 
 function initializePage() {
 	$(".btn").click(weekClick);
+	$("#calendar_button").click(createCalendar);
 	
 }
 
@@ -117,6 +118,32 @@ function weekClick(e) {
 	else {
 		return;
 	}
+}
 
+function createCalendar() {
+	$.getScript('http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js',function(){
+  
+  var date = new Date();
+  var d = date.getDate();
+  var m = date.getMonth();
+  var y = date.getFullYear();
 
+  $('#calendar').fullCalendar({
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay'
+    },
+    editable: true,
+    events: [
+      {
+        title: 'Retreat',
+        start: new Date(y, m, 14)
+      }
+    ]
+  });
+  $("#calendar_btn").hide();
+}
+
+) 
 }
