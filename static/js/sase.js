@@ -92,7 +92,7 @@ function weekClick(e) {
 		      		break
 		      }
 
-		       var color_div = "<div style='border: solid; border-color:" + color + "'";
+		       var color_div = "<div style='border: solid; border-radius: 25px; border-color:" + color + "'";
 		       console.log(color_div);
 
               
