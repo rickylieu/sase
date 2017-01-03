@@ -73,26 +73,26 @@ function weekClick(e) {
 
 		      switch (data[i].type) {
 		      	case "Professional":
-		      		color = "blue";
+		      		color = "#69F0AE";
 		      		break
 		      	case "Social":
-		      		color = "orange"
+		      		color = "#FFA726"
 		      		break
 		        case "Community Service":
-		        	color = "red"
+		        	color = "#EF5350"
 		        	break
 		      	case "Fundraising":
-		      		color = "green"
+		      		color = "#4CAF50"
 		      		break
 		      	case "GBM":
-		      		color = "black";
+		      		color = "#E0E0E0";
 		      		break
 		      	case "Officer/Intern":
-		      		color = "yellow";
+		      		color = "#FFEB3B";
 		      		break
 		      }
 
-		       var color_div = "<div style='border: solid; border-radius: 25px; border-color:" + color + "'";
+		       var color_div = "<div style='border: solid; border-color: #263238; border-radius: 25px; background-color:" + color + "'";
 		       console.log(color_div);
 
               
