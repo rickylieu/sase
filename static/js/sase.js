@@ -48,22 +48,22 @@ function weekClick(e) {
               var d = new Date(data[i].date);
 		      d.setHours(24);
 		      var day = d.toDateString().substring(0,3);
-		      console.log(day);
 		      var day_id = "#" + day;
-		      console.log(day_id);
 		      var day_head = "#" + day + "_head";
 		      $(day_head).empty();
+		      //Append date to table
 		      $(day_head).append(day + " " + data[i].date.substring(5,10));
 
               
               //Append to modal html
 		      $(day_id).append("</br><b>Event: </b>" + data[i].name + "</br>"
 		        + "<b>Type of Event: </b>" + data[i].type + "</br>"
-		        + "<b>Date: </b>" + data[i].date + "</br>" 
 		        + "<b>Start time: </b>" + data[i].start + "</br>"
 		        + "<b>End time: </b>" + data[i].end + "</br>"
 		        + "<b>Location: </b>" + data[i].location + "</br>"
 		       );
+             //$(day_id).css('background', 'rgb(255,220,200)');
+
              }
 
 
