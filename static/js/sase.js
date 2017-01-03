@@ -97,7 +97,7 @@ function weekClick(e) {
 
               
               //Append to modal html
-		      $(day_id).append(color_div + "<b>Event: </b>" + data[i].name + "</br>"
+		      $(day_id).append(color_div + "</br><b>Event: </b>" + data[i].name + "</br>"
 		        + "<b>Type of Event: </b>" + data[i].type + "</br>"
 		        + "<b>Start time: </b>" + data[i].start + "</br>"
 		        + "<b>End time: </b>" + data[i].end + "</br>"
