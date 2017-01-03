@@ -43,13 +43,13 @@ function weekClick(e) {
 		    $("#Fri_head").empty();
 		    $("#Sat_head").empty();
 		    $("#Sun_head").empty();
-		    $("#Mon_head").append("Mon");
-		    $("#Tue_head").append("Tue");
-		    $("#Wed_head").append("Wed");
-		    $("#Thu_head").append("Thu");
-		    $("#Fri_head").append("Fri");
-		    $("#Sat_head").append("Sat");
-		    $("#Sun_head").append("Sun");
+		    $("#Mon_head").append("<b>" + "Mon");
+		    $("#Tue_head").append("<b>" + "Tue");
+		    $("#Wed_head").append("<b>" + "Wed");
+		    $("#Thu_head").append("<b>" + "Thu");
+		    $("#Fri_head").append("<b>" + "Fri");
+		    $("#Sat_head").append("<b>" + "Sat");
+		    $("#Sun_head").append("<b>" + "Sun");
 
 
 
@@ -68,7 +68,7 @@ function weekClick(e) {
 		      var day_head = "#" + day + "_head";
 		      $(day_head).empty();
 		      //Append date to table
-		      $(day_head).append(day + " " + data[i].date.substring(5,10));
+		      $(day_head).append("<b>" + day + " " + data[i].date.substring(5,10));
 		      var color = "";
 
 		      switch (data[i].type) {
