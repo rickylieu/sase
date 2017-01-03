@@ -20,7 +20,7 @@ exports.add_event = function(req, res) {
      "end": form_data.end,
      "location": form_data.location,
     })
-    newEvent.save(afterSavin    g);
+    newEvent.save(afterSaving);
     
     function afterSaving(err) {
     if(err) {console.log(err); res.send(500);}
