@@ -74,3 +74,16 @@ h1 {
 #start_time .second.two-digits{
 	display: none;
 }
+
+.input-color {
+    position: absolute;
+}
+.input-color input {
+}
+.input-color .color-box {
+    width: 90px;
+    height: 20px;
+    display: inline-block;
+    background-color: #ccc;
+    text-align: center;
+}
