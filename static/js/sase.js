@@ -36,6 +36,7 @@ function weekClick(e) {
 		    $("#Sat").empty();
 		    $("#Sun").empty();
 
+
 		    //Append event
 	     	$("#week_title").append(week);
 
@@ -50,6 +51,9 @@ function weekClick(e) {
 		      console.log(day);
 		      var day_id = "#" + day;
 		      console.log(day_id);
+		      var day_head = "#" + day + "_head";
+		      $(day_head).empty();
+		      $(day_head).append(day + " " + data[i].date.substring(5,10));
 
               
               //Append to modal html
