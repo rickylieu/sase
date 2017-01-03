@@ -76,14 +76,13 @@ h1 {
 }
 
 .input-color {
-    position: absolute;
+    position: relative;
 }
 .input-color input {
 }
 .input-color .color-box {
-    width: 90px;
-    height: 20px;
+    width: 30%;
     display: inline-block;
     background-color: #ccc;
-    text-align: center;
+    margin-top: 5px;
 }
