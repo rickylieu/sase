@@ -1,5 +1,4 @@
 'use strict';
-
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
@@ -15,6 +14,7 @@ function weekClick(e) {
 	var week = $(this).text();
 	var i = 0;
 
+
 	//Only clicks if title starts with "Week"
 	if(week.substring(1,5) == "Week") {
 		console.log("Week is:" + week);
@@ -24,6 +24,11 @@ function weekClick(e) {
 		//Append event
 		$("#week_title").append(week);
 		$("#week_ctns").append('<tr><td>Week is:' + week + '</tr></td>');
+
+		$.post("weeks", { 
+          "week": week,
+        }, function(data) {console.log("success!")} );  
+
 	}
 
 	else {

@@ -25,3 +25,20 @@ exports.add_event = function(req, res) {
     res.redirect('/');
   }
 }
+
+exports.get_event = function(req, res) {
+    var week = req.body.week;
+    week = week.substring(6,8);
+    console.log(week);
+
+    models.Event
+    .find({"week": week})
+    .exec(afterQuery);
+
+  function afterQuery(err, events) {
+    if(err) console.log(err);
+    console.log(events);
+    res.json(events);
+  }
+
+}
