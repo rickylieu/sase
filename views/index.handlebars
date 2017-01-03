@@ -78,7 +78,7 @@
 
       </div>
       <div class="form-group">
-      <!-- Event -->
+      <!-- Location -->
           <label for="Location">Location</label>
           <input type="text" class="form-control" id="location">
       </div>
@@ -100,6 +100,12 @@
     var type = document.getElementById("type");
     var week = document.getElementById("week");
     var date = document.getElementById("date");
+    var start = document.getElementById("start_time");
+    var end = document.getElementById('end_time');
+    var location = document.getElementById('location');
+
+    console.log("hello");
+    console.log(location.value);
 
      $.post("/add_event", 
     { 
@@ -107,6 +113,9 @@
       "type": type.value, 
       "week": week.value, 
       "date": date.value,
+      "start": start.value,
+      "end": end.value,
+      "location": location.value,
     }, function(data) {console.log("success!")} );
   }
 </script>

@@ -10,13 +10,15 @@ exports.view = function(req, res){
 
 exports.add_event = function(req, res) {
 	var form_data = req.body;
-	console.log(form_data.date);
 
 	var newEvent =  new models.Event({
      "name": form_data.name,
      "type": form_data.type,
      "week": form_data.week,
-     "date": form_data.date
+     "date": form_data.date,
+     "start": form_data.start,
+     "end": form_data.end,
+     "location": form_data.location,
     })
     newEvent.save(afterSaving);
     
@@ -34,6 +36,7 @@ exports.get_event = function(req, res) {
 
     models.Event
     .find({"week": week})
+    .sort("-date")
     .exec(afterQuery);
 
 
