@@ -19,7 +19,6 @@ var sase = require('./routes/sase');
 
 
 // Connect to the Mongo database, whether locally or on Heroku
-// MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
 var local_database_name = 'sase';
 var local_database_uri  = 'mongodb://localhost/' + local_database_name
 var uri = "mongodb://sase:saseislyfe@ds023478.mlab.com:23478/heroku_m9jc2gg9";

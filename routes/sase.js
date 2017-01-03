@@ -42,7 +42,6 @@ exports.get_event = function(req, res) {
 
   function afterQuery(err, events) {
     if(err) console.log(err);
-    console.log(events);
     res.send(events);
   }
 
