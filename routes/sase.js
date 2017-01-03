@@ -36,7 +36,7 @@ exports.get_event = function(req, res) {
 
     models.Event
     .find({"week": week})
-    .sort("-date")
+    .sort({"date": 1})
     .exec(afterQuery);
 
 
