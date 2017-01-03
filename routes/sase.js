@@ -26,6 +26,7 @@ exports.add_event = function(req, res) {
   }
 }
 
+//Function to put events into modal
 exports.get_event = function(req, res) {
     var week = req.body.week;
     week = week.substring(6,8);
@@ -35,10 +36,11 @@ exports.get_event = function(req, res) {
     .find({"week": week})
     .exec(afterQuery);
 
+
   function afterQuery(err, events) {
     if(err) console.log(err);
     console.log(events);
-    res.json(events);
+    res.send(events);
   }
 
 }

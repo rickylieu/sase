@@ -18,16 +18,24 @@ function weekClick(e) {
 	//Only clicks if title starts with "Week"
 	if(week.substring(1,5) == "Week") {
 		console.log("Week is:" + week);
-		//Overwrite contents to append events
-		$("#week_ctns").empty();
-		$("#week_title").empty();
-		//Append event
-		$("#week_title").append(week);
-		$("#week_ctns").append('<tr><td>Week is:' + week + '</tr></td>');
 
+        //Posts to routes to get events of that week
 		$.post("weeks", { 
           "week": week,
-        }, function(data) {console.log("success!")} );  
+        }, 
+        //After getting events, append html to modals
+         function(data) {
+        	$("#week_ctns").empty();
+		    $("#week_title").empty();
+		    //Append event
+	     	$("#week_title").append(week);
+	     	for(i=0; i < data.length; i++) {
+		      $("#week_ctns").append('<tr><td>' + "<b>Event: </b>" + data[i].name + "</br>"
+		        + "<b>Type of Event: </b>" + data[i].type + "</br>"
+		        + "<b>Week: </b>" + data[i].week + "</br>"
+		        + "<b>Date: </b>" + data[i].date + "</br>" + '</tr></td>');
+             }  
+		   });
 
 	}
 
