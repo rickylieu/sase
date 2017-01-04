@@ -199,8 +199,16 @@ html .fc,
 
 .fc-widget-header,    /* <th>, usually */
 .fc-widget-content {  /* <td>, usually */
-	border: 1px solid #ddd;
+	border: 2px solid #ddd;
 	}
+
+.fc-widget-content {
+	/*background-color: #4CAF50;
+	opacity: .02;*/
+	border: 2px solid black;
+	background-color: #4CAF50;
+	opacity: 0.2;
+}	
 	
 .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
 	background: #4CAF50;
@@ -437,6 +445,7 @@ table.fc-border-separate {
 	
 .fc-grid .fc-day-content {
 	clear: both;
+
 	padding: 2px 2px 1px; /* distance between events and day edges */
 	}
 	
