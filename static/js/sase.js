@@ -128,6 +128,7 @@ function lastChanged() {
 	var i = 0;
 	$.get("changed", function(events) {
 	  $("#updated").empty();
+	  $("#updated").append("</br>");
 
 
 	  for(i = 0; i < events.length; i++) {	
