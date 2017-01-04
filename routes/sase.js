@@ -25,7 +25,19 @@ exports.add_event = function(req, res) {
     
     function afterSaving(err) {
     if(err) {console.log(err); res.send(500);}
-    var sendNotification = function(data) {
+
+    var message = { 
+     app_id: "765d6e0f-459d-4ef1-8144-b527ccf80c05",
+     contents: {"en": "Added " + form_data.name + " to Week " + form_data.week},
+     included_segments: ["All"]
+    };
+ 
+    sendNotification(message);
+      res.redirect('/');
+  }
+}
+
+var sendNotification = function(data) {
   var headers = {
     "Content-Type": "application/json; charset=utf-8",
     "Authorization": "Basic MmY4NDY2N2MtNDI0Ny00MWE0LThiYjgtYzVhYmEwMzUwOWZk"
@@ -55,17 +67,6 @@ exports.add_event = function(req, res) {
   req.write(JSON.stringify(data));
   req.end();
 };
-
-var message = { 
-  app_id: "765d6e0f-459d-4ef1-8144-b527ccf80c05",
-  contents: {"en": "Added " + form_data.name + " to Week " + form_data.week},
-  included_segments: ["All"]
-};
-
-sendNotification(message);
-    res.redirect('/');
-  }
-}
 
 //Function to put events into modal
 exports.get_event = function(req, res) {
