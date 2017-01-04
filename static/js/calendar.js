@@ -17,6 +17,7 @@ function createCalendar() {
   var m = date.getMonth();
   var y = date.getFullYear();
   var i = 0;
+  var color = "";
 
   var event_array = [];
   var event_title = "Winter Retreat 2";
@@ -35,7 +36,29 @@ function createCalendar() {
   		date.setHours(24);
   		console.log(date);
 
-  		event_array[i] = {title: event_title, start: date}
+
+		switch (events[i].type) {
+		    case "Professional":
+		      	color = "#69F0AE";
+		      	break
+		    case "Social":
+		      	color = "#FFA726"
+		      	break
+		    case "Community Service":
+		        color = "#EF5350"
+		        break
+		    case "Fundraising":
+		      	color = "#4CAF50"
+		      	break
+		    case "GBM":
+		      	color = "#E0E0E0";
+		      	break
+		    case "Officer/Intern":
+		      	color = "#FFEB3B";
+		      	break
+		      }
+
+  		event_array[i] = {title: event_title, start: date, color: color};
   	}
 
   	$('#calendar').fullCalendar({
@@ -46,7 +69,7 @@ function createCalendar() {
       },
       editable: true,
       events: event_array,
-      eventColor: "#4CAF50",
+      eventTextColor: "black",
       backgroundColor: "blue",
       aspectRatio: 1
     });
