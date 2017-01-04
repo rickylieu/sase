@@ -37,7 +37,7 @@ function createCalendar() {
 
   		event_array[i] = {title: event_title, start: date}
   	}
-  	
+
   	$('#calendar').fullCalendar({
       header: {
         left: 'prev,next today',
@@ -48,7 +48,7 @@ function createCalendar() {
       events: event_array,
       eventColor: "#4CAF50",
       backgroundColor: "blue",
-      aspectRatio: 2
+      aspectRatio: 1
     });
 
   });
