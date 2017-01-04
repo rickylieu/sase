@@ -16,6 +16,7 @@ var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
 
 var sase = require('./routes/sase');
+var calendar = require('./routes/calendar');
 
 
 // Connect to the Mongo database, whether locally or on Heroku
@@ -51,6 +52,7 @@ app.use(express.static(__dirname + '/static'));
 
 // Add routes here
 app.get('/', sase.view);
+app.get('/calendar_view', calendar.view);
 app.post('/add_event', sase.add_event);
 app.post('/weeks', sase.get_event);
 app.get('/calendar', sase.get_calendar);

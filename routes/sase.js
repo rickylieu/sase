@@ -5,7 +5,7 @@ var models = require('../models');
  */
 
 exports.view = function(req, res){
-	res.render('index');
+	res.render('index', { "calendar_view": "/calendar_view"});
 };
 
 exports.add_event = function(req, res) {
