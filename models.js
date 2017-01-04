@@ -10,6 +10,7 @@ var EventSchema = new Mongoose.Schema({
 	"start": String,
 	"end": String,
 	"location": String,
+	"comments": String
   // fields are defined here
 });
 

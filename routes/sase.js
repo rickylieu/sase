@@ -20,6 +20,7 @@ exports.add_event = function(req, res) {
      "start": form_data.start,
      "end": form_data.end,
      "location": form_data.location,
+     "comments": form_data.comments
     })
     newEvent.save(afterSaving);
     
