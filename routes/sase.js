@@ -39,11 +39,19 @@ exports.get_event = function(req, res) {
     .sort({"date": 1})
     .exec(afterQuery);
 
+    /*models.Event
+    .find()
+    .limit(2)
+    .sort({$natural:-1})
+    .exec(afterQuery);*/
+
 
   function afterQuery(err, events) {
     if(err) console.log(err);
+    //console.log(events);
     res.send(events);
   }
+
 
 }
 
@@ -59,4 +67,19 @@ exports.get_calendar = function(req, res) {
         if(err) console.log(err);
         res.send(events);
     }
+}
+
+//Function to get last added events
+exports.get_last_changed = function(req, res) {
+     models.Event
+    .find()
+    .limit(3)
+    .sort({$natural:-1})
+    .exec(afterQuery)
+
+    function afterQuery(err, events) {
+    if(err) console.log(err);
+    //console.log(events);
+    res.send(events);
+  }
 }

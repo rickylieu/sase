@@ -36,7 +36,7 @@ function createCalendar() {
   		date.setHours(24);
   		console.log(date);
 
-
+  		//Change color depending on event type
 		switch (events[i].type) {
 		    case "Professional":
 		      	color = "#69F0AE";
@@ -58,6 +58,7 @@ function createCalendar() {
 		      	break
 		      }
 
+		//Create an array to dynamically change title, date, color
   		event_array[i] = {title: event_title, start: date, color: color};
   	}
 
@@ -71,7 +72,7 @@ function createCalendar() {
       events: event_array,
       eventTextColor: "black",
       backgroundColor: "blue",
-      aspectRatio: 1.3
+      aspectRatio: 1.3,
     });
 
   });

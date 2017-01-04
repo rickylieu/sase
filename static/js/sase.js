@@ -6,6 +6,8 @@ $(document).ready(function() {
 
 function initializePage() {
 	$(".btn").click(weekClick);
+	lastChanged();
+
 }
 
 function weekClick(e) {
@@ -93,6 +95,9 @@ function weekClick(e) {
 
 		       var color_div = "<div style='border: solid; border-color: #263238; border-radius: 25px; background-color:" + color + "'";
 		       console.log(color_div);
+		      
+
+
 
               
               //Append to modal html
@@ -116,5 +121,24 @@ function weekClick(e) {
 	else {
 		return;
 	}
+}
+
+//Create time stamp for events
+function lastChanged() {
+	var i = 0;
+	$.get("changed", function(events) {
+	  $("#updated").empty();
+
+
+	  for(i = 0; i < events.length; i++) {	
+	    var timestamp = events[i]._id.toString().substring(0,8);
+	    var date = new Date( parseInt( timestamp, 16 ) * 1000 )
+	    date = date.toString().substring(0,10); 
+	    var week = events[i].week;
+	    var event = events[i].name;
+	    console.log(date);
+	    $("#updated").append("<b>" + date + ": " + "Added " + event + " in Week " + week + "</b></br>");
+	  }
+    });
 }
 

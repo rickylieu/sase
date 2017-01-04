@@ -56,6 +56,7 @@ app.get('/calendar_view', calendar.view);
 app.post('/add_event', sase.add_event);
 app.post('/weeks', sase.get_event);
 app.get('/calendar', sase.get_calendar);
+app.get('/changed', sase.get_last_changed);
 
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 3000 for development
