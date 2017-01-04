@@ -157,7 +157,9 @@ function createCalendar() {
         right: 'month'
       },
       editable: true,
-      events: event_array
+      events: event_array,
+      eventColor: "#4CAF50",
+      backgroundColor: "blue"
     });
     $("#calendar_btn").toggle();
 

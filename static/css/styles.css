@@ -203,11 +203,12 @@ html .fc,
 	}
 	
 .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
-	background: #fcfcfc;
+	background: #4CAF50;
+	opacity: .3;
 	}
 	
 .fc-cell-overlay { /* semi-transparent rectangle while dragging */
-	background: #bcccbc;
+	background: blue;
 	opacity: .3;
 	filter: alpha(opacity=30); /* for IE */
 	}
