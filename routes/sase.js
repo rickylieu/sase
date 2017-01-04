@@ -5,6 +5,7 @@ var models = require('../models');
  */
 
 exports.view = function(req, res){
+
 	res.render('index', { "calendar_view": "/calendar_view"});
 };
 
@@ -24,6 +25,44 @@ exports.add_event = function(req, res) {
     
     function afterSaving(err) {
     if(err) {console.log(err); res.send(500);}
+    var sendNotification = function(data) {
+  var headers = {
+    "Content-Type": "application/json; charset=utf-8",
+    "Authorization": "Basic MmY4NDY2N2MtNDI0Ny00MWE0LThiYjgtYzVhYmEwMzUwOWZk"
+  };
+  
+  var options = {
+    host: "onesignal.com",
+    port: 443,
+    path: "/api/v1/notifications",
+    method: "POST",
+    headers: headers
+  };
+  
+  var https = require('https');
+  var req = https.request(options, function(res) {  
+    res.on('data', function(data) {
+      console.log("Response:");
+      console.log(JSON.parse(data));
+    });
+  });
+  
+  req.on('error', function(e) {
+    console.log("ERROR:");
+    console.log(e);
+  });
+  
+  req.write(JSON.stringify(data));
+  req.end();
+};
+
+var message = { 
+  app_id: "765d6e0f-459d-4ef1-8144-b527ccf80c05",
+  contents: {"en": "Added " + form_data.name + " to Week " + form_data.week},
+  included_segments: ["All"]
+};
+
+sendNotification(message);
     res.redirect('/');
   }
 }
