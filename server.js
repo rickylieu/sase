@@ -53,6 +53,7 @@ app.use(express.static(__dirname + '/static'));
 app.get('/', sase.view);
 app.post('/add_event', sase.add_event);
 app.post('/weeks', sase.get_event);
+app.get('/calendar', sase.get_calendar);
 
 // Start the server
 var port = process.env.PORT || PORT; // 80 for web, 3000 for development

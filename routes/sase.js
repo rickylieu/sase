@@ -46,3 +46,17 @@ exports.get_event = function(req, res) {
   }
 
 }
+
+//Function to put events into calendar
+exports.get_calendar = function(req, res) {
+
+    models.Event
+    .find()
+    .sort({"date": 1})
+    .exec(afterQuery);
+
+    function afterQuery(err, events) {
+        if(err) console.log(err);
+        res.send(events);
+    }
+}
