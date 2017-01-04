@@ -71,7 +71,7 @@ function createCalendar() {
       events: event_array,
       eventTextColor: "black",
       backgroundColor: "blue",
-      aspectRatio: 1
+      aspectRatio: 1.3
     });
 
   });
