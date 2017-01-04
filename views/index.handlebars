@@ -12,6 +12,25 @@
 
 
 	<title> Sase 5 Lyfe</title>
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "765d6e0f-459d-4ef1-8144-b527ccf80c05",
+      autoRegister: false, /* Set to true to automatically prompt visitors */
+      subdomainName: 'sase.onesignal.com',
+      /*
+      subdomainName: Use the value you entered in step 1.4: http://imgur.com/a/f6hqN
+      */
+      httpPermissionRequest: {
+        enable: true
+      },
+      notifyButton: {
+          enable: true /* Set to false to hide */
+      }
+    }]);
+  </script>
 </head>
 
 <body>
@@ -215,6 +234,8 @@
 
 <button><a href="{{calendar_view}}">Calendar</a></button>
 <div> <p1 id="updated"> </p1>
+
+
 
 
 
